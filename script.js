@@ -6,7 +6,7 @@ var upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q"
 var lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var numeric = ["1","2","3","4","5","6","7","8","9","0"]
 var special = ["!","@","#","$","%","^","&","*","(",")","-","_","=","+",";",":","/",">","<"]
-var length = [8-128characters]
+var length;
 
 // Write password to the #password input
 function writePassword() {
@@ -17,7 +17,12 @@ function writePassword() {
 
 }
 
-length = prompt(please choose between 8-128 characters.);
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+length = prompt("please choose 8-128 characters");
 console.log("you chose " + length);
 
 if(!length){
@@ -34,7 +39,6 @@ console.log("you chose " + length);
   console.log("Number " + numeric);
   special = confirm("do you want special characters?");
   console.log("Special " + special);
-
 };
 
 if(!lower && !upper && !numeric && !special){
@@ -80,18 +84,46 @@ else if(number && special){
   Choose = lower.concat(special);
   console.log(choose);
 }
-if(lower){
+else if(lower){
   Choose = lower;
   console.log(choose);
 }
-if(lower && special){
+else if(lower && special){
   Choose = lower.concat(special);
   console.log(choose);
 }
-if(upper && special){
+else if(upper && special){
   Choose = lower.concat(special);
   console.log(choose);
 }
+else if(lower){
+  Choose = lower;
+  console.log(choose);
+}
+else if(upper){
+  Choose = upper;
+  console.log(choose);
+}
+else if(numeric){
+  Choose = numeric;
+  console.log(choose);
+}
+else if(special){
+  Choose = special;
+  console.log(choose);
+};
+
+var password = [];
+
+for (let i = 0; i < length; i++) {
+  var chose = choose[math.floor(math.random() * choose.length)];
+  password.push(chosen);
+  console.log(chosen);
+}
+
+var password = password.join("");
+console.log("your password is going to be " + password);
+return password;
 
 
 
