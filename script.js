@@ -34,7 +34,66 @@ console.log("you chose " + length);
   console.log("Number " + numeric);
   special = confirm("do you want special characters?");
   console.log("Special " + special);
+
+};
+
+if(!lower && !upper && !numeric && !special){
+  alert("please choose what you would like.")
 }
+else if(lower && upper && numeric && special){
+  Choose = lower.concat(upper, numberic, special);
+  console.log(choose);
+}
+else if(lower && upper && numeric){
+  Choose = lower.concat(upper, numberic);
+  console.log(choose);
+}
+else if(lower && upper && special){
+  Choose = lower.concat(upper, special);
+  console.log(choose);
+}
+else if(lower && numeric && special){
+  Choose = lower.concat(numberic, special);
+  console.log(choose);
+}
+else if(upper && numeric && special){
+  Choose = lower.concat(numberic, special);
+  console.log(choose);
+}
+else if(lower && upper){
+  Choose = lower.concat(upper);
+  console.log(choose);
+}
+else if(lower && numeric){
+  Choose = lower.concat(numberic);
+  console.log(choose);
+}
+else if(lower && special){
+  Choose = lower.concat(special);
+  console.log(choose);
+}
+else if(upper && special){
+  Choose = lower.concat(special);
+  console.log(choose);
+}
+else if(number && special){
+  Choose = lower.concat(special);
+  console.log(choose);
+}
+if(lower){
+  Choose = lower;
+  console.log(choose);
+}
+if(lower && special){
+  Choose = lower.concat(special);
+  console.log(choose);
+}
+if(upper && special){
+  Choose = lower.concat(special);
+  console.log(choose);
+}
+
+
 
 
 // Add event listener to generate button
